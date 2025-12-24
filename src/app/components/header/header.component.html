@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <strong>FAC</strong> Company
+    </a>
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+            {{ 'HEADER.HOME' | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
+            {{ 'HEADER.ABOUT' | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/services" routerLinkActive="active" (click)="closeMenu()">
+            {{ 'HEADER.SERVICES' | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+            {{ 'HEADER.CONTACT' | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light btn-sm ms-lg-2" (click)="toggleLanguage()">
+            {{ currentLang === 'en' ? 'العربية' : 'English' }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

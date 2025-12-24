@@ -1,0 +1,84 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "ABOUT": "About Us",
+    "SERVICES": "Services",
+    "CONTACT": "Contact"
+  },
+  "HOME": {
+    "TITLE": "Welcome to FAC Company",
+    "SUBTITLE": "Your Trusted Partner in Excellence",
+    "DESCRIPTION": "We provide innovative solutions and exceptional services to help your business grow and succeed in the digital age.",
+    "CTA_BUTTON": "Get Started"
+  },
+  "ABOUT": {
+    "TITLE": "About Us",
+    "DESCRIPTION": "FAC Company is a leading provider of professional services with years of experience in delivering excellence to our clients.",
+    "MISSION_TITLE": "Our Mission",
+    "MISSION_TEXT": "To deliver innovative solutions that exceed our clients' expectations and drive their success.",
+    "VISION_TITLE": "Our Vision",
+    "VISION_TEXT": "To be the most trusted and respected company in our industry, known for quality and reliability.",
+    "VALUES_TITLE": "Our Values",
+    "VALUES": {
+      "INTEGRITY": "Integrity",
+      "EXCELLENCE": "Excellence",
+      "INNOVATION": "Innovation",
+      "CUSTOMER_FOCUS": "Customer Focus"
+    }
+  },
+  "SERVICES": {
+    "TITLE": "Our Services",
+    "SUBTITLE": "We offer a comprehensive range of professional services",
+    "SERVICE_1": {
+      "TITLE": "Consulting",
+      "DESCRIPTION": "Expert consulting services to help your business make informed decisions and achieve strategic goals."
+    },
+    "SERVICE_2": {
+      "TITLE": "Development",
+      "DESCRIPTION": "Custom software development solutions tailored to your specific business needs and requirements."
+    },
+    "SERVICE_3": {
+      "TITLE": "Support",
+      "DESCRIPTION": "24/7 technical support and maintenance services to keep your systems running smoothly."
+    },
+    "SERVICE_4": {
+      "TITLE": "Training",
+      "DESCRIPTION": "Professional training programs to enhance your team's skills and knowledge."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contact Us",
+    "SUBTITLE": "Get in touch with us",
+    "FORM": {
+      "NAME": "Name",
+      "NAME_PLACEHOLDER": "Enter your name",
+      "EMAIL": "Email",
+      "EMAIL_PLACEHOLDER": "Enter your email",
+      "SUBJECT": "Subject",
+      "SUBJECT_PLACEHOLDER": "Enter subject",
+      "MESSAGE": "Message",
+      "MESSAGE_PLACEHOLDER": "Enter your message",
+      "SEND": "Send Message",
+      "SUCCESS": "Your message has been sent successfully!",
+      "ERROR": "There was an error sending your message. Please try again."
+    },
+    "INFO": {
+      "ADDRESS": "123 Business Street, City, Country",
+      "PHONE": "+123 456 7890",
+      "EMAIL": "info@faccompany.com",
+      "HOURS": "Mon - Fri: 9:00 AM - 6:00 PM"
+    }
+  },
+  "FOOTER": {
+    "ABOUT_COMPANY": "About FAC Company",
+    "ABOUT_TEXT": "We are committed to providing the best services and solutions to our clients worldwide.",
+    "QUICK_LINKS": "Quick Links",
+    "FOLLOW_US": "Follow Us",
+    "COPYRIGHT": "© 2025 FAC Company. All rights reserved."
+  },
+  "VALIDATION": {
+    "REQUIRED": "This field is required",
+    "EMAIL_INVALID": "Please enter a valid email address",
+    "MIN_LENGTH": "Minimum length is {{value}} characters"
+  }
+}

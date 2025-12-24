@@ -1,0 +1,59 @@
+<footer class="footer bg-dark text-light py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">{{ 'FOOTER.ABOUT_COMPANY' | translate }}</h5>
+        <p>{{ 'FOOTER.ABOUT_TEXT' | translate }}</p>
+      </div>
+      
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">{{ 'FOOTER.QUICK_LINKS' | translate }}</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a routerLink="/" class="footer-link">
+              <i class="bi bi-chevron-right me-2"></i>
+              {{ 'HEADER.HOME' | translate }}
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/about" class="footer-link">
+              <i class="bi bi-chevron-right me-2"></i>
+              {{ 'HEADER.ABOUT' | translate }}
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/services" class="footer-link">
+              <i class="bi bi-chevron-right me-2"></i>
+              {{ 'HEADER.SERVICES' | translate }}
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/contact" class="footer-link">
+              <i class="bi bi-chevron-right me-2"></i>
+              {{ 'HEADER.CONTACT' | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">{{ 'FOOTER.FOLLOW_US' | translate }}</h5>
+        <div class="social-links">
+          <a 
+            *ngFor="let social of socialLinks" 
+            [href]="social.url" 
+            [attr.aria-label]="social.name"
+            class="social-link me-3">
+            <i class="bi" [ngClass]="social.icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <hr class="my-4 bg-light">
+    
+    <div class="text-center">
+      <p class="mb-0">{{ 'FOOTER.COPYRIGHT' | translate }}</p>
+    </div>
+  </div>
+</footer>

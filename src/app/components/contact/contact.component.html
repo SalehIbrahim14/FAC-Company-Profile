@@ -1,0 +1,148 @@
+<div class="contact-container">
+  <section class="contact-hero py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">{{ 'CONTACT.TITLE' | translate }}</h1>
+        <p class="lead">{{ 'CONTACT.SUBTITLE' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-content py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="contact-form-container p-4">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="name" class="form-label">{{ 'CONTACT.FORM.NAME' | translate }}</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="name" 
+                  formControlName="name"
+                  [placeholder]="'CONTACT.FORM.NAME_PLACEHOLDER' | translate"
+                  [class.is-invalid]="name?.invalid && name?.touched">
+                <div class="invalid-feedback" *ngIf="name?.invalid && name?.touched">
+                  <span *ngIf="name?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
+                  <span *ngIf="name?.errors?.['minlength']">{{ 'VALIDATION.MIN_LENGTH' | translate: {value: 2} }}</span>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">{{ 'CONTACT.FORM.EMAIL' | translate }}</label>
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  id="email" 
+                  formControlName="email"
+                  [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate"
+                  [class.is-invalid]="email?.invalid && email?.touched">
+                <div class="invalid-feedback" *ngIf="email?.invalid && email?.touched">
+                  <span *ngIf="email?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
+                  <span *ngIf="email?.errors?.['email']">{{ 'VALIDATION.EMAIL_INVALID' | translate }}</span>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="subject" class="form-label">{{ 'CONTACT.FORM.SUBJECT' | translate }}</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="subject" 
+                  formControlName="subject"
+                  [placeholder]="'CONTACT.FORM.SUBJECT_PLACEHOLDER' | translate"
+                  [class.is-invalid]="subject?.invalid && subject?.touched">
+                <div class="invalid-feedback" *ngIf="subject?.invalid && subject?.touched">
+                  <span *ngIf="subject?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
+                  <span *ngIf="subject?.errors?.['minlength']">{{ 'VALIDATION.MIN_LENGTH' | translate: {value: 3} }}</span>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">{{ 'CONTACT.FORM.MESSAGE' | translate }}</label>
+                <textarea 
+                  class="form-control" 
+                  id="message" 
+                  rows="5" 
+                  formControlName="message"
+                  [placeholder]="'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate"
+                  [class.is-invalid]="message?.invalid && message?.touched"></textarea>
+                <div class="invalid-feedback" *ngIf="message?.invalid && message?.touched">
+                  <span *ngIf="message?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
+                  <span *ngIf="message?.errors?.['minlength']">{{ 'VALIDATION.MIN_LENGTH' | translate: {value: 10} }}</span>
+                </div>
+              </div>
+
+              <div class="alert alert-success" *ngIf="submitSuccess">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                {{ 'CONTACT.FORM.SUCCESS' | translate }}
+              </div>
+
+              <div class="alert alert-danger" *ngIf="submitError">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                {{ 'CONTACT.FORM.ERROR' | translate }}
+              </div>
+
+              <button 
+                type="submit" 
+                class="btn btn-primary btn-lg w-100"
+                [disabled]="isSubmitting">
+                <span *ngIf="!isSubmitting">
+                  <i class="bi bi-send me-2"></i>
+                  {{ 'CONTACT.FORM.SEND' | translate }}
+                </span>
+                <span *ngIf="isSubmitting">
+                  <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                  Sending...
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="contact-info p-4">
+            <h3 class="h4 mb-4">Contact Information</h3>
+            <div class="info-item mb-4">
+              <div class="info-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div class="info-text">
+                <h5>Address</h5>
+                <p>{{ 'CONTACT.INFO.ADDRESS' | translate }}</p>
+              </div>
+            </div>
+            <div class="info-item mb-4">
+              <div class="info-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div class="info-text">
+                <h5>Phone</h5>
+                <p>{{ 'CONTACT.INFO.PHONE' | translate }}</p>
+              </div>
+            </div>
+            <div class="info-item mb-4">
+              <div class="info-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div class="info-text">
+                <h5>Email</h5>
+                <p>{{ 'CONTACT.INFO.EMAIL' | translate }}</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="bi bi-clock-fill"></i>
+              </div>
+              <div class="info-text">
+                <h5>Business Hours</h5>
+                <p>{{ 'CONTACT.INFO.HOURS' | translate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
