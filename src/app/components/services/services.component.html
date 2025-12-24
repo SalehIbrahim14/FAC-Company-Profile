@@ -1,0 +1,26 @@
+<div class="services-container">
+  <section class="services-hero py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">{{ 'SERVICES.TITLE' | translate }}</h1>
+        <p class="lead">{{ 'SERVICES.SUBTITLE' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-list py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-6" *ngFor="let service of services; let i = index">
+          <div class="service-card p-4" [class.animate-delay-1]="i === 1" [class.animate-delay-2]="i === 2" [class.animate-delay-3]="i === 3">
+            <div class="service-icon mb-3">
+              <i class="bi" [ngClass]="service.icon"></i>
+            </div>
+            <h3 class="h4 mb-3">{{ 'SERVICES.' + service.key + '.TITLE' | translate }}</h3>
+            <p class="text-muted">{{ 'SERVICES.' + service.key + '.DESCRIPTION' | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

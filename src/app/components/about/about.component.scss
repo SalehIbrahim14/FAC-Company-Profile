@@ -1,0 +1,47 @@
+.about-container {
+  min-height: calc(100vh - 56px);
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  color: white;
+}
+
+.info-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .icon-container {
+    i {
+      font-size: 3rem;
+      color: #0d6efd;
+    }
+  }
+}
+
+.value-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+
+  .value-icon {
+    i {
+      font-size: 2.5rem;
+      color: #0d6efd;
+    }
+  }
+}
