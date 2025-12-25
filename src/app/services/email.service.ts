@@ -1,41 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { delay } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { App_Config } from '../../assets/environments';
 
 export interface ContactMessage {
   name: string;
   email: string;
-  subject: string;
+  phone?: string;
+  companyName?: string;
+  service?: string;
   message: string;
+  lang?: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
-  // In a real application, this would be your backend API endpoint
-  private apiUrl = '/api/contact';
+  // Backend API endpoint
+  private apiUrl = App_Config.apiUrl + '/send';
 
   constructor(private http: HttpClient) { }
 
   /**
    * Send email through contact form
-   * Note: This is a placeholder implementation that simulates an API call.
-   * In production, you would integrate with a real backend service or email API
-   * such as SendGrid, AWS SES, or your custom backend endpoint.
+   * Connects to Node.js backend service
    */
   sendEmail(contactMessage: ContactMessage): Observable<any> {
-    // Simulated API call - replace with actual HTTP post in production
-    console.log('Email would be sent:', contactMessage);
-    
-    // In production, uncomment this and configure your backend endpoint:
-    // return this.http.post(this.apiUrl, contactMessage);
-    
-    // Simulated success response for demonstration
-    return of({
-      success: true,
-      message: 'Email sent successfully'
-    }).pipe(delay(1000)); // Simulate network delay
+    console.log('Sending email:', contactMessage);
+    return this.http.post(this.apiUrl, contactMessage);
   }
 }

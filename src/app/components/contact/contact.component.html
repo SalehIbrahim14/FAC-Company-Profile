@@ -1,5 +1,5 @@
 <div class="contact-container" id="contact">
-  <section class="contact-hero py-5">
+  <section class="contact-hero py-5 bg-secondary">
     <div class="container">
       <div class="text-center mb-5">
         <h1 class="display-4 fw-bold">{{ 'CONTACT.TITLE' | translate }}</h1>
@@ -16,11 +16,7 @@
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
               <div class="mb-3">
                 <label for="name" class="form-label">{{ 'CONTACT.FORM.NAME' | translate }}</label>
-                <input 
-                  type="text" 
-                  class="form-control" 
-                  id="name" 
-                  formControlName="name"
+                <input type="text" class="form-control" id="name" formControlName="name"
                   [placeholder]="'CONTACT.FORM.NAME_PLACEHOLDER' | translate"
                   [class.is-invalid]="name?.invalid && name?.touched">
                 <div class="invalid-feedback" *ngIf="name?.invalid && name?.touched">
@@ -31,11 +27,7 @@
 
               <div class="mb-3">
                 <label for="email" class="form-label">{{ 'CONTACT.FORM.EMAIL' | translate }}</label>
-                <input 
-                  type="email" 
-                  class="form-control" 
-                  id="email" 
-                  formControlName="email"
+                <input type="email" class="form-control" id="email" formControlName="email"
                   [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate"
                   [class.is-invalid]="email?.invalid && email?.touched">
                 <div class="invalid-feedback" *ngIf="email?.invalid && email?.touched">
@@ -45,32 +37,51 @@
               </div>
 
               <div class="mb-3">
-                <label for="subject" class="form-label">{{ 'CONTACT.FORM.SUBJECT' | translate }}</label>
-                <input 
-                  type="text" 
-                  class="form-control" 
-                  id="subject" 
-                  formControlName="subject"
-                  [placeholder]="'CONTACT.FORM.SUBJECT_PLACEHOLDER' | translate"
-                  [class.is-invalid]="subject?.invalid && subject?.touched">
-                <div class="invalid-feedback" *ngIf="subject?.invalid && subject?.touched">
-                  <span *ngIf="subject?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
-                  <span *ngIf="subject?.errors?.['minlength']">{{ 'VALIDATION.MIN_LENGTH' | translate: {value: 3} }}</span>
+                <label for="phone" class="form-label">{{ 'CONTACT.FORM.PHONE' | translate }}</label>
+                <input type="text" class="form-control" id="phone" formControlName="phone"
+                  [placeholder]="'CONTACT.FORM.PHONE_PLACEHOLDER' | translate"
+                  [class.is-invalid]="phone?.invalid && phone?.touched">
+                <div class="invalid-feedback" *ngIf="phone?.invalid && phone?.touched">
+                  <span *ngIf="phone?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
+                  <span *ngIf="phone?.errors?.['minlength']">{{ 'VALIDATION.MIN_LENGTH' | translate: {value: 10}
+                    }}</span>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="companyName" class="form-label">{{ 'CONTACT.FORM.COMPANY_NAME' | translate }}</label>
+                <input type="text" class="form-control" id="companyName" formControlName="companyName"
+                  [placeholder]="'CONTACT.FORM.COMPANY_NAME_PLACEHOLDER' | translate"
+                  [class.is-invalid]="companyName?.invalid && companyName?.touched">
+                <div class="invalid-feedback" *ngIf="companyName?.invalid && companyName?.touched">
+                  <span *ngIf="companyName?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="service" class="form-label">{{ 'CONTACT.FORM.SERVICE' | translate }}</label>
+                <select class="form-select" id="service" formControlName="service"
+                  [class.is-invalid]="service?.invalid && service?.touched">
+                  <option value="" data-translate="contact_form_service_placeholder">{{ 'CONTACT.FORM.SERVICE_PLACEHOLDER' | translate }}</option>
+                  <option *ngFor="let option of serviceOptions" [value]="option.value">
+                    {{ option.label | translate }}
+                  </option>
+                </select>
+                  
+                <div class="invalid-feedback" *ngIf="service?.invalid && service?.touched">
+                  <span *ngIf="service?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
                 </div>
               </div>
 
               <div class="mb-3">
                 <label for="message" class="form-label">{{ 'CONTACT.FORM.MESSAGE' | translate }}</label>
-                <textarea 
-                  class="form-control" 
-                  id="message" 
-                  rows="5" 
-                  formControlName="message"
+                <textarea class="form-control" id="message" rows="5" formControlName="message"
                   [placeholder]="'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate"
                   [class.is-invalid]="message?.invalid && message?.touched"></textarea>
                 <div class="invalid-feedback" *ngIf="message?.invalid && message?.touched">
                   <span *ngIf="message?.errors?.['required']">{{ 'VALIDATION.REQUIRED' | translate }}</span>
-                  <span *ngIf="message?.errors?.['minlength']">{{ 'VALIDATION.MIN_LENGTH' | translate: {value: 10} }}</span>
+                  <span *ngIf="message?.errors?.['minlength']">{{ 'VALIDATION.MIN_LENGTH' | translate: {value: 10}
+                    }}</span>
                 </div>
               </div>
 
@@ -84,10 +95,7 @@
                 {{ 'CONTACT.FORM.ERROR' | translate }}
               </div>
 
-              <button 
-                type="submit" 
-                class="btn btn-primary btn-lg w-100"
-                [disabled]="isSubmitting">
+              <button type="submit" class="btn btn-primary btn-lg w-100" [disabled]="isSubmitting">
                 <span *ngIf="!isSubmitting">
                   <i class="bi bi-send me-2"></i>
                   {{ 'CONTACT.FORM.SEND' | translate }}
@@ -102,42 +110,87 @@
         </div>
 
         <div class="col-lg-6">
-          <div class="contact-info p-4">
-            <h3 class="h4 mb-4">{{ 'CONTACT.INFO.CONTACT_US' | translate }}</h3>
-            <div class="info-item mb-4">
-              <div class="info-icon">
-                <i class="bi bi-geo-alt-fill"></i>
-              </div>
-              <div class="info-text">
-                <h5>{{ 'CONTACT.INFO.ADDRESS_TITLE' | translate }}</h5>
-                <p>{{ 'CONTACT.INFO.ADDRESS' | translate }}</p>
-              </div>
-            </div>
-            <div class="info-item mb-4">
-              <div class="info-icon">
-                <i class="bi bi-telephone-fill"></i>
-              </div>
-              <div class="info-text">
-                <h5>{{ 'CONTACT.INFO.PHONE_TITLE' | translate }}</h5>
-                <p>{{ 'CONTACT.INFO.PHONE' | translate }}</p>
+          <div class="contact-info-wrapper">
+            <h4 class="fw-bold mb-4">{{ 'CONTACT.INFO.CONTACT_US' | translate }}</h4>
+
+            <div class="contact-info-card p-4 mb-3 rounded shadow-sm hover-lift">
+              <div class="d-flex align-items-start">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-geo-alt-fill text-primary fs-3"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">{{ 'CONTACT.INFO.ADDRESS_TITLE' | translate }}</h5>
+                  <p class="text-muted mb-0">{{ 'CONTACT.INFO.ADDRESS' | translate }}</p>
+                </div>
               </div>
             </div>
-            <div class="info-item mb-4">
-              <div class="info-icon">
-                <i class="bi bi-envelope-fill"></i>
-              </div>
-              <div class="info-text">
-                <h5>{{ 'CONTACT.INFO.EMAIL_TITLE' | translate }}</h5>
-                <p>{{ 'CONTACT.INFO.EMAIL' | translate }}</p>
+
+            <div class="contact-info-card p-4 mb-3 rounded shadow-sm hover-lift">
+              <div class="d-flex align-items-start">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-telephone-fill text-primary fs-3"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">{{ 'CONTACT.INFO.PHONE_TITLE' | translate }}</h5>
+                  <p class="text-muted mb-0">
+                    <a href="tel:+966565005078" class="text-decoration-none text-muted">{{ 'CONTACT.INFO.PHONE' |
+                      translate }}</a><br>
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="info-item">
-              <div class="info-icon">
-                <i class="bi bi-clock-fill"></i>
+
+            <div class="contact-info-card p-4 mb-3 rounded shadow-sm hover-lift">
+              <div class="d-flex align-items-start">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-envelope-fill text-primary fs-3"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">{{ 'CONTACT.INFO.EMAIL_TITLE' | translate }}</h5>
+                  <p class="text-muted mb-0">
+                    <a href="mailto:info@firstanswer1.com" class="text-decoration-none text-muted">{{
+                      'CONTACT.INFO.EMAIL' | translate }}</a><br>
+                    <a href="mailto:support@firstanswer1.com"
+                      class="text-decoration-none text-muted">support@firstanswer1.com</a>
+                  </p>
+                </div>
               </div>
-              <div class="info-text">
-                <h5>{{ 'CONTACT.INFO.HOURS_TITLE' | translate }}</h5>
-                <p>{{ 'CONTACT.INFO.HOURS' | translate }}</p>
+            </div>
+
+            <div class="contact-info-card p-4 mb-3 rounded shadow-sm hover-lift">
+              <div class="d-flex align-items-start">
+                <div class="contact-icon me-3">
+                  <i class="bi bi-clock-fill text-primary fs-3"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">{{ 'CONTACT.INFO.HOURS_TITLE' | translate }}</h5>
+                  <p class="text-muted mb-0">
+                    <span>{{ 'CONTACT.INFO.HOURS_WEEKDAYS' | translate }}</span><br>
+                    <span>{{ 'CONTACT.INFO.HOURS_SATURDAY' | translate }}</span><br>
+                    <span>{{ 'CONTACT.INFO.HOURS_FRIDAY' | translate }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-connect mt-4 p-4 rounded bg-light text-center">
+              <h5 class="fw-bold mb-3" data-translate="footer_connect">تواصل معنا</h5>
+              <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.linkedin.com/in/firstanswerco"
+                  class="btn btn-outline-primary rounded-circle p-3 hover-lift">
+                  <i class="bi bi-linkedin fs-5"></i>
+                </a>
+                <a href="https://x.com/firstanswerco" class="btn btn-outline-primary rounded-circle p-3 hover-lift">
+                  <i class="bi bi-twitter fs-5"></i>
+                </a>
+                <a href="https://www.facebook.com/firstanswerco"
+                  class="btn btn-outline-primary rounded-circle p-3 hover-lift">
+                  <i class="bi bi-facebook fs-5"></i>
+                </a>
+                <a href="https://www.instagram.com/firstanswerco"
+                  class="btn btn-outline-primary rounded-circle p-3 hover-lift">
+                  <i class="bi bi-instagram fs-5"></i>
+                </a>
               </div>
             </div>
           </div>

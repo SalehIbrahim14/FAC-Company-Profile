@@ -1,16 +1,30 @@
-.about-container {
-  min-height: calc(100vh - 56px);
+.about {
+  margin: auto;
+  width: fit-content;
 }
 
-.about-hero {
-  background: linear-gradient(135deg, #022f4e 0%, #021f2e 100%);
-  color: white;
+.bg-image-about {
+  background:
+    linear-gradient(rgba(2, 47, 78, 0.7),
+      rgba(2, 47, 78, 0.7)),
+    url('/assets/images/about_us.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  // width: 1000px;
+  // height: 650px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .info-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  // border-radius: 10px;
+  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 100%;
   transition: transform 0.3s ease;
 
@@ -21,19 +35,19 @@
   .icon-container {
     i {
       font-size: 3rem;
-      color: #022f4e;
+      color: #08AE2C;
     }
   }
 }
 
 .value-card {
-  background: #f8f9fa;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+  // background: #f8f9fa;
+  // border-radius: 10px;
   height: 100%;
+  transition: all 0.3s ease;
 
   &:hover {
-    background: white;
+    // background: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
   }
@@ -41,7 +55,7 @@
   .value-icon {
     i {
       font-size: 2.5rem;
-      color: #022f4e;
+      color: #08AE2C;
     }
   }
 }

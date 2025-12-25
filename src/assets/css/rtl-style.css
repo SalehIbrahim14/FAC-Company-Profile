@@ -69,6 +69,6 @@ input, select, textarea {
 }
 
 .language-switcher {
-  margin-right: 20rem !important;
-  margin-left: 4rem !important;
+  margin-right: 12rem !important;
+  margin-left: 0rem !important;
 }

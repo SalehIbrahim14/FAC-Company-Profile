@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة اتصال جديدة</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .info-row {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .label {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .value {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .message-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .icon {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>📧 رسالة اتصال جديدة</h1>
+        </div>
+        
+        <div class="content">
+            <div class="info-row">
+                <span class="label">👤 الاسم:</span>
+                <span class="value">{{name}}</span>
+            </div>
+            
+            <div class="info-row">
+                <span class="label">📧 البريد الإلكتروني:</span>
+                <span class="value">{{email}}</span>
+            </div>
+            
+            <div class="info-row">
+                <span class="label">📱 الهاتف:</span>
+                <span class="value">{{phone}}</span>
+            </div>
+            
+            <div class="info-row">
+                <span class="label">🏢 اسم الشركة:</span>
+                <span class="value">{{companyName}}</span>
+            </div>
+            
+            <div class="info-row">
+                <span class="label">🎯 الخدمة:</span>
+                <span class="value">{{service}}</span>
+            </div>
+            
+            <div class="info-row">
+                <span class="label">💬 الرسالة:</span>
+                <div class="message-box value">{{message}}</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>تم إرسال هذه الرسالة من نموذج الاتصال في موقع FAC</p>
+            <p>© 2025 FIRST ANSWER FOR CONSULTING. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</body>
+</html>

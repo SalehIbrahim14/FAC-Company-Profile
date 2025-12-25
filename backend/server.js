@@ -1,0 +1,80 @@
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const nodemailer = require("nodemailer");
+const fs = require("fs");
+const path = require("path");
+require("dotenv").config();
+
+const app = express();
+const PORT = 3000;
+
+// Middleware
+app.use(cors()); // Allow cross-origin requests
+app.use(bodyParser.json());
+
+// Route to handle email sending
+app.post("/send", async (req, res) => {
+  const { name, email, message, phone, service, companyName, lang } = req.body;
+
+  // Determine language (default to Arabic if not specified)
+  const language = lang || "ar";
+
+  // Select appropriate email template based on language
+  // const templateFileName = language === "en" ? "email-template-en.html" : "email-template.html";
+  const templateFileName = "email-template.html";
+  const templatePath = path.join(__dirname, templateFileName);
+
+  try {
+    fs.readFile(templatePath, "utf8", async (err, html) => {
+      if (err) {
+        console.error("Error reading HTML file:", err);
+        return res.status(500).send("Failed to process email template.");
+      }
+
+      // Define localized fallback values
+      const notAvailable = language === "en" ? "N/A" : "غير متوفر";
+
+      // Replace placeholders in template
+      const updatedHtml = html
+        .replace("{{name}}", name || notAvailable)
+        .replace("{{email}}", email || notAvailable)
+        .replace("{{phone}}", phone || notAvailable)
+        .replace("{{service}}", service || notAvailable)
+        .replace("{{companyName}}", companyName || notAvailable)
+        .replace("{{message}}", message || notAvailable);
+
+      const transporter = nodemailer.createTransport({
+        host: process.env.MAILGUN_HOST,
+        port: process.env.MAILGUN_PORT,
+        auth: {
+          user: process.env.MAILGUN_USER,
+          pass: process.env.MAILGUN_PASS
+        }
+      });
+
+      // Configure email options
+      const subjectPrefix = language === "en" ? "New message from" : "رسالة جديدة من";
+      const mailOptions = {
+        from: "saleh.ibrahem.w@gmail.com", // User's email
+        to: "info@firstanswer1.com", // Your company email
+        subject: `${subjectPrefix} ${name}`,
+        html: updatedHtml,
+      };
+
+
+      await transporter.sendMail(mailOptions);
+      const successMessage = language === "en" ? "Message sent successfully!" : "تم إرسال الرسالة بنجاح!";
+      res.status(200).send({ success: true, message: successMessage });
+    });
+  } catch (error) {
+    console.error("Error sending email: ", error);
+    const errorMessage = language === "en" ? "Failed to send message." : "فشل إرسال الرسالة.";
+    res.status(500).send({ success: false, message: errorMessage });
+  }
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});

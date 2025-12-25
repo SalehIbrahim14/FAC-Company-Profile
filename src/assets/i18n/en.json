@@ -123,15 +123,26 @@
     "LOGOS_TITLE": "Proud to Serve Industry Leaders"
   },
   "CONTACT": {
-    "TITLE": "Contact Us",
-    "SUBTITLE": "Get in touch with us",
+    "TITLE": "Get in Touch",
+    "SUBTITLE": "Let's start a conversation about your HR needs",
     "FORM": {
       "NAME": "Name",
       "NAME_PLACEHOLDER": "Enter your name",
       "EMAIL": "Email",
       "EMAIL_PLACEHOLDER": "Enter your email",
-      "SUBJECT": "Subject",
-      "SUBJECT_PLACEHOLDER": "Enter subject",
+      "PHONE": "Phone",
+      "PHONE_PLACEHOLDER": "Enter phone number",
+      "SERVICE": "Service",
+      "SERVICE_PLACEHOLDER": "Select a service...",
+      "SERVICE_TALENT": "Talent Acquisition",
+      "SERVICE_PERFORMANCE": "Performance Management",
+      "SERVICE_COMPENSATION": "Compensation & Benefits",
+      "SERVICE_ORGANIZATIONAL": "Organizational Development",
+      "SERVICE_TRAINING": "Training & Development",
+      "SERVICE_COMPLIANCE": "HR Compliance & Policy",
+      "SERVICE_OTHER": "Other",
+      "COMPANY_NAME": "Company Name",
+      "COMPANY_NAME_PLACEHOLDER": "Enter company name",
       "MESSAGE": "Message",
       "MESSAGE_PLACEHOLDER": "Enter your message",
       "SEND": "Send Message",
@@ -148,7 +159,9 @@
       "EMAIL_TITLE": "email",
       "EMAIL": "info@firstanswer1.com",
       "HOURS_TITLE": "hours",
-      "HOURS": "Sun - Thu: 7:00 AM - 10:00 PM"
+      "HOURS_WEEKDAYS": "Sunday - Thursday: 7:00 AM - 10:00 PM",
+      "HOURS_SATURDAY": "Saturday: 9:00 AM - 5:00 PM",
+      "HOURS_FRIDAY": "Friday: Closed"
     }
   },
   "FOOTER": {

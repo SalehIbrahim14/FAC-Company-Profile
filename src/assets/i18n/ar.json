@@ -123,15 +123,26 @@
     "LOGOS_TITLE": "فخورون بخدمة قادة الصناعة"
   },
   "CONTACT": {
-    "TITLE": "اتصل بنا",
-    "SUBTITLE": "تواصل معنا",
+    "TITLE": "تواصل معنا",
+    "SUBTITLE": "لنبدأ محادثة حول احتياجات الموارد البشرية الخاصة بك",
     "FORM": {
       "NAME": "الاسم",
       "NAME_PLACEHOLDER": "أدخل اسمك",
       "EMAIL": "البريد الإلكتروني",
       "EMAIL_PLACEHOLDER": "أدخل بريدك الإلكتروني",
-      "SUBJECT": "الموضوع",
-      "SUBJECT_PLACEHOLDER": "أدخل الموضوع",
+      "PHONE": "الهاتف",
+      "PHONE_PLACEHOLDER": "أدخل رقم الهاتف",
+      "SERVICE": "الخدمة",
+      "SERVICE_PLACEHOLDER": "اختر خدمة...",
+      "SERVICE_TALENT": "اكتساب المواهب",
+      "SERVICE_PERFORMANCE": "إدارة الأداء",
+      "SERVICE_COMPENSATION": "التعويضات والمزايا",
+      "SERVICE_ORGANIZATIONAL": "التطوير التنظيمي",
+      "SERVICE_TRAINING": "التدريب والتطوير",
+      "SERVICE_COMPLIANCE": "الامتثال والسياسات في الموارد البشرية",
+      "SERVICE_OTHER": "أخرى",
+      "COMPANY_NAME": "اسم الشركة",
+      "COMPANY_NAME_PLACEHOLDER": "أدخل اسم الشركة",
       "MESSAGE": "الرسالة",
       "MESSAGE_PLACEHOLDER": "أدخل رسالتك",
       "SEND": "إرسال الرسالة",
@@ -148,7 +159,10 @@
       "EMAIL_TITLE": "البريد الإلكتروني",
       "EMAIL": "info@firstanswer1.com",
       "HOURS_TITLE": "ساعات العمل",
-      "HOURS": "الأحد - الخميس: 7:00 صباحاً - 10:00 مساءً"
+      "HOURS": "الأحد - الخميس: 7:00 صباحاً - 10:00 مساءً",
+      "HOURS_WEEKDAYS": "الأحد - الخميس: 7:00 صباحاً - 10:00 مساءً",
+      "HOURS_SATURDAY": "السبت: 9:00 صباحاً - 5:00 مساءً",
+      "HOURS_FRIDAY": "الجمعة: مغلق"
     }
   },
   "FOOTER": {
