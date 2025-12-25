@@ -11,11 +11,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  currentLang: string = 'en';
   isMenuOpen: boolean = false;
+  DEFAULT_LANGUAGE = 'ar'; // Default language is Arabic
+
+  currentTranslations = {};
+  currentLang = this.DEFAULT_LANGUAGE;
+  rtlStylesheet: any;
+
 
   constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.currentLang || this.translate.defaultLang || 'en';
+    const savedLang = localStorage.getItem("preferredLanguage") || this.DEFAULT_LANGUAGE;
+    this.currentLang = savedLang;
+    this.translate.use(this.currentLang);
+    this.updateRtlStylesheet(this.currentLang);
   }
 
   toggleLanguage(): void {
@@ -23,6 +31,8 @@ export class HeaderComponent {
     this.translate.use(this.currentLang);
     document.documentElement.dir = this.currentLang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = this.currentLang;
+    localStorage.setItem("preferredLanguage", this.currentLang);
+    this.updateRtlStylesheet(this.currentLang);
   }
 
   toggleMenu(): void {
@@ -31,5 +41,33 @@ export class HeaderComponent {
 
   closeMenu(): void {
     this.isMenuOpen = false;
+  }
+
+  updateRtlStylesheet(lang: string) {
+    // Head element for dynamically adding/removing CSS
+    const headElement = document.querySelector("head");
+
+    // Handle direction (RTL or LTR) and applied styles
+    if (lang === "ar") {
+      document.body.setAttribute("dir", "rtl");
+      document.documentElement.setAttribute("dir", "rtl");
+
+      // Add rtl-style.css dynamically if it exists
+      if (!this.rtlStylesheet) {
+        this.rtlStylesheet = document.createElement("link");
+        this.rtlStylesheet.setAttribute("rel", "stylesheet");
+        this.rtlStylesheet.setAttribute("href", "assets/css/rtl-style.css");
+        headElement?.appendChild(this.rtlStylesheet);
+      }
+    } else {
+      document.body.setAttribute("dir", "ltr");
+      document.documentElement.setAttribute("dir", "ltr");
+
+      // Remove rtl-style.css dynamically
+      if (this.rtlStylesheet) {
+        this.rtlStylesheet.remove();
+        this.rtlStylesheet = null;
+      }
+    }
   }
 }

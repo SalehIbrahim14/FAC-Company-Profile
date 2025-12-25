@@ -18,6 +18,13 @@
     animation: float 3s ease-in-out infinite;
   }
 }
+.bg-img-hero{
+  background-image: url('/assets/images/1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  padding: 2rem;
+}
 
 @keyframes float {
   0%, 100% {
@@ -88,7 +95,7 @@
   .feature-icon {
     i {
       font-size: 3rem;
-      color: #0d6efd;
+      color: #022f4e;
     }
   }
 }

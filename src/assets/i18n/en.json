@@ -3,7 +3,9 @@
     "HOME": "Home",
     "ABOUT": "About Us",
     "SERVICES": "Services",
-    "CONTACT": "Contact"
+    "CONTACT": "Contact",
+    "COMPANY_NAME": "FIRST ANSWER FOR CONSULTING",
+    "COMPANY_NAME_SHORT": "FAC"
   },
   "HOME": {
     "TITLE": "Welcome to FAC Company",
@@ -31,19 +33,63 @@
     "SUBTITLE": "We offer a comprehensive range of professional services",
     "SERVICE_1": {
       "TITLE": "Consulting",
-      "DESCRIPTION": "Expert consulting services to help your business make informed decisions and achieve strategic goals."
+      "DESCRIPTION": "Expert consulting services to help your business make informed decisions and achieve strategic goals.",
+      "BENEFITS": {
+        "B1": "Business Strategy Development",
+        "B2": "Market Analysis",
+        "B3": "Operational Improvement",
+        "B4": "Risk Management"
+      }
     },
     "SERVICE_2": {
       "TITLE": "Development",
-      "DESCRIPTION": "Custom software development solutions tailored to your specific business needs and requirements."
+      "DESCRIPTION": "Custom software development solutions tailored to your specific business needs and requirements.",
+      "BENEFITS": {
+        "B1": "Custom Software Solutions",
+        "B2": "Mobile App Development",
+        "B3": "Web Development",
+        "B4": "System Integration"
+      }
     },
     "SERVICE_3": {
       "TITLE": "Support",
-      "DESCRIPTION": "24/7 technical support and maintenance services to keep your systems running smoothly."
+      "DESCRIPTION": "24/7 technical support and maintenance services to keep your systems running smoothly.",
+      "BENEFITS": {
+        "B1": "24/7 Technical Support",
+        "B2": "System Maintenance",
+        "B3": "Troubleshooting",
+        "B4": "Performance Monitoring"
+      }
     },
     "SERVICE_4": {
       "TITLE": "Training",
-      "DESCRIPTION": "Professional training programs to enhance your team's skills and knowledge."
+      "DESCRIPTION": "Professional training programs to enhance your team's skills and knowledge.",
+      "BENEFITS": {
+        "B1": "Customized Training Programs",
+        "B2": "Workshops and Seminars",
+        "B3": "E-learning Solutions",
+        "B4": "Certification Courses"
+      }
+    },
+    "SERVICE_5": {
+      "TITLE": "Project Management",
+      "DESCRIPTION": "Comprehensive project management services to ensure your projects are delivered on time and within budget.",
+      "BENEFITS": {
+        "B1": "Project Planning and Scheduling",
+        "B2": "Resource Management",
+        "B3": "Risk Assessment",
+        "B4": "Quality Assurance"
+      }
+    },
+    "SERVICE_6": {
+      "TITLE": "Documentation",
+      "DESCRIPTION": "Professional documentation services to create clear and concise technical and user documents.",
+      "BENEFITS": {
+        "B1": "Technical Writing",
+        "B2": "User Manuals",
+        "B3": "Process Documentation",
+        "B4": "Compliance Documentation"
+      }
     }
   },
   "CONTACT": {
@@ -60,13 +106,19 @@
       "MESSAGE_PLACEHOLDER": "Enter your message",
       "SEND": "Send Message",
       "SUCCESS": "Your message has been sent successfully!",
-      "ERROR": "There was an error sending your message. Please try again."
+      "ERROR": "There was an error sending your message. Please try again.",
+      "SENDING": "Sending..."
     },
     "INFO": {
-      "ADDRESS": "123 Business Street, City, Country",
-      "PHONE": "+123 456 7890",
-      "EMAIL": "info@faccompany.com",
-      "HOURS": "Mon - Fri: 9:00 AM - 6:00 PM"
+      "CONTACT_US": "Contact Information",
+      "ADDRESS_TITLE": "address",
+      "ADDRESS": "KSA, Riyadh",
+      "PHONE_TITLE": "phone",
+      "PHONE": "+966 565005078",
+      "EMAIL_TITLE": "email",
+      "EMAIL": "info@firstanswer1.com",
+      "HOURS_TITLE": "hours",
+      "HOURS": "Sun - Thu: 7:00 AM - 10:00 PM"
     }
   },
   "FOOTER": {

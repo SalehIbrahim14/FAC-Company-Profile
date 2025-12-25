@@ -14,9 +14,9 @@ export class FooterComponent {
   currentYear = new Date().getFullYear();
   
   socialLinks = [
-    { name: 'Facebook', icon: 'bi-facebook', url: '#' },
-    { name: 'Twitter', icon: 'bi-twitter-x', url: '#' },
-    { name: 'LinkedIn', icon: 'bi-linkedin', url: '#' },
-    { name: 'Instagram', icon: 'bi-instagram', url: '#' }
+    { name: 'Facebook', icon: 'bi-facebook', url: 'https://www.facebook.com/firstanswerco' },
+    { name: 'Twitter', icon: 'bi-twitter-x', url: 'https://x.com/firstanswerco' },
+    { name: 'LinkedIn', icon: 'bi-linkedin', url: 'https://www.linkedin.com/in/firstanswerco' },
+    { name: 'Instagram', icon: 'bi-instagram', url: 'https://www.instagram.com/firstanswerco' }
   ];
 }

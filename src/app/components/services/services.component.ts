@@ -11,9 +11,11 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ServicesComponent {
   services = [
-    { key: 'SERVICE_1', icon: 'bi-graph-up' },
-    { key: 'SERVICE_2', icon: 'bi-code-slash' },
-    { key: 'SERVICE_3', icon: 'bi-tools' },
-    { key: 'SERVICE_4', icon: 'bi-mortarboard-fill' }
+    { key: 'SERVICE_1', icon: 'bi-graph-up', benefits: ["B1", "B2", "B3", "B4"] },
+    { key: 'SERVICE_2', icon: 'bi-code-slash', benefits: ["B1", "B2", "B3", "B4"] },
+    { key: 'SERVICE_3', icon: 'bi-tools', benefits: ["B1", "B2", "B3", "B4"] },
+    { key: 'SERVICE_4', icon: 'bi-mortarboard-fill', benefits: ["B1", "B2", "B3", "B4"] },
+    { key: 'SERVICE_5', icon: 'bi-briefcase-fill', benefits: ["B1", "B2", "B3", "B4"] },
+    { key: 'SERVICE_6', icon: 'bi-file-text-fill', benefits: ["B1", "B2", "B3", "B4"] },
   ];
 }

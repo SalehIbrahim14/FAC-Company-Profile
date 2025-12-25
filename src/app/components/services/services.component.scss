@@ -30,6 +30,21 @@
     animation-fill-mode: both;
   }
 
+  &.animate-delay-4 {
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
+  }
+
+  &.animate-delay-5 {
+    animation-delay: 1s;
+    animation-fill-mode: both;
+  }
+
+  &.animate-delay-6 {
+    animation-delay: 1.2s;
+    animation-fill-mode: both;
+  }
+
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
@@ -42,10 +57,30 @@
   .service-icon {
     i {
       font-size: 3rem;
-      color: #6610f2;
+      color: #022f4e;
       transition: transform 0.3s ease;
     }
   }
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 110, 253, 0.1);
+  border-radius: 15px;
+  transition: all var(--transition-speed) ease;
+}
+
+.service-card:hover .service-icon {
+  background: #08af2c;
+  transform: rotate(5deg) scale(1.1);
+}
+
+.service-card:hover .service-icon i {
+  color: white !important;
 }
 
 @keyframes fadeInUp {
@@ -53,6 +88,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

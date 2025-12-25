@@ -1,21 +1,28 @@
 .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
+
   .navbar-brand {
     font-size: 1.5rem;
     font-weight: 600;
+    color: #08af2c;
   }
 
   .nav-link {
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
-    
+    color: #08af2c;
+
     &:hover {
       color: rgba(255, 255, 255, 0.8);
     }
-    
+
     &.active {
       font-weight: 600;
     }
   }
+}
+
+.language-switcher {
+  margin-right: 4rem;
+  margin-left: 20rem;
 }

@@ -1,20 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top shadow-lg text-primary">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">
-      <strong>FAC</strong> Company
+    <a class="navbar-brand fw-bold" routerLink="/">
+      <strong>{{ 'HEADER.COMPANY_NAME' | translate }}</strong>
     </a>
-    <button 
-      class="navbar-toggler" 
-      type="button" 
-      (click)="toggleMenu()"
-      [attr.aria-expanded]="isMenuOpen"
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen"
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            (click)="closeMenu()">
             {{ 'HEADER.HOME' | translate }}
           </a>
         </li>
@@ -34,9 +31,11 @@
           </a>
         </li>
         <li class="nav-item">
-          <button class="btn btn-outline-light btn-sm ms-lg-2" (click)="toggleLanguage()">
-            {{ currentLang === 'en' ? 'العربية' : 'English' }}
-          </button>
+          <div class="language-switcher">
+            <button class="btn btn-outline-primary btn-sm ms-lg-2" (click)="toggleLanguage()">
+              {{ currentLang === 'en' ? 'العربية' : 'English' }}
+            </button>
+          </div>
         </li>
       </ul>
     </div>
