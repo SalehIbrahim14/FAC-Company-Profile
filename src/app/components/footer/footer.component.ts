@@ -19,4 +19,15 @@ export class FooterComponent {
     { name: 'LinkedIn', icon: 'bi-linkedin', url: 'https://www.linkedin.com/in/firstanswerco' },
     { name: 'Instagram', icon: 'bi-instagram', url: 'https://www.instagram.com/firstanswerco' }
   ];
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80; // Account for fixed header
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  }
 }

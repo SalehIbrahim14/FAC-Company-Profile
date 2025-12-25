@@ -1,12 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ServicesComponent } from './components/services/services.component';
+import { Clients } from './components/clients/clients';
+import { ContactComponent } from './components/contact/contact.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [
+    HeaderComponent, 
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    ServicesComponent,
+    Clients,
+    ContactComponent
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

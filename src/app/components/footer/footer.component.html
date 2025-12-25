@@ -10,25 +10,31 @@
         <h5 class="fw-bold mb-3">{{ 'FOOTER.QUICK_LINKS' | translate }}</h5>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a routerLink="/" class="footer-link">
+            <a href="#home" (click)="scrollToSection('home')" class="footer-link">
               <i class="bi bi-chevron-right me-2"></i>
               {{ 'HEADER.HOME' | translate }}
             </a>
           </li>
           <li class="mb-2">
-            <a routerLink="/about" class="footer-link">
+            <a href="#about" (click)="scrollToSection('about')" class="footer-link">
               <i class="bi bi-chevron-right me-2"></i>
               {{ 'HEADER.ABOUT' | translate }}
             </a>
           </li>
           <li class="mb-2">
-            <a routerLink="/services" class="footer-link">
+            <a href="#services" (click)="scrollToSection('services')" class="footer-link">
               <i class="bi bi-chevron-right me-2"></i>
               {{ 'HEADER.SERVICES' | translate }}
             </a>
           </li>
           <li class="mb-2">
-            <a routerLink="/contact" class="footer-link">
+            <a href="#clients" (click)="scrollToSection('clients')" class="footer-link">
+              <i class="bi bi-chevron-right me-2"></i>
+              {{ 'HEADER.CLIENTS' | translate }}
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="#contact" (click)="scrollToSection('contact')" class="footer-link">
               <i class="bi bi-chevron-right me-2"></i>
               {{ 'HEADER.CONTACT' | translate }}
             </a>
