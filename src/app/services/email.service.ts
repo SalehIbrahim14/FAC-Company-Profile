@@ -18,7 +18,7 @@ export interface ContactMessage {
 })
 export class EmailService {
   // Backend API endpoint
-  private apiUrl = App_Config.apiUrl + '/send';
+  private apiUrl = App_Config.apiUrl;
 
   constructor(private http: HttpClient) { }
 
