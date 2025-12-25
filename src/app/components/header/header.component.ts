@@ -43,6 +43,20 @@ export class HeaderComponent {
     this.isMenuOpen = false;
   }
 
+  scrollToSection(sectionId: string): void {
+    this.closeMenu();
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offsetTop = element.offsetTop - 80; // Account for fixed header
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
+  }
+
   updateRtlStylesheet(lang: string) {
     // Head element for dynamically adding/removing CSS
     const headElement = document.querySelector("head");

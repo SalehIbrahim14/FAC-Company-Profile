@@ -11,4 +11,14 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  scrollToContact(): void {
+    const element = document.getElementById('contact');
+    if (element) {
+      const offsetTop = element.offsetTop - 80; // Account for fixed header
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  }
 }

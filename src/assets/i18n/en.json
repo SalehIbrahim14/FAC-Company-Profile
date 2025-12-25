@@ -3,6 +3,7 @@
     "HOME": "Home",
     "ABOUT": "About Us",
     "SERVICES": "Services",
+    "CLIENTS": "Our Clients",
     "CONTACT": "Contact",
     "COMPANY_NAME": "FIRST ANSWER FOR CONSULTING",
     "COMPANY_NAME_SHORT": "FAC"
@@ -91,6 +92,35 @@
         "B4": "Compliance Documentation"
       }
     }
+  },
+  "CLIENTS": {
+    "SECTION_TITLE": "Our Valued Clients",
+    "SECTION_SUBTITLE": "Trusted by leading organizations across industries",
+    "STAT_1": "Satisfied Clients",
+    "STAT_2": "Completed Projects",
+    "STAT_3": "Client Satisfaction",
+    "STAT_4": "Years of Excellence",
+    "TESTIMONIALS_TITLE": "Client Testimonials",
+    "TESTIMONIALS_SUBTITLE": "Hear what our clients say about us",
+    "TESTIMONIAL_1_TEXT": "FIRST ANSWER FOR CONSULTING transformed our hiring process. Their expertise helped us reduce time-to-hire by 40% while improving candidate quality. Highly recommended!",
+    "TESTIMONIAL_1_NAME": "Sarah Johnson",
+    "TESTIMONIAL_1_POSITION": "CEO, Tech Innovations Inc.",
+    "TESTIMONIAL_2_TEXT": "The FAC team provided exceptional support during our organizational restructuring. Their professional approach and strategic insights were invaluable.",
+    "TESTIMONIAL_2_NAME": "Michael Chen",
+    "TESTIMONIAL_2_POSITION": "HR Director, Global Finance Group",
+    "TESTIMONIAL_3_TEXT": "Excellent service! FAC helped us develop a comprehensive performance management system that significantly improved employee engagement and productivity.",
+    "TESTIMONIAL_3_NAME": "Emily Rodriguez",
+    "TESTIMONIAL_3_POSITION": "VP of Operations, Retail Solutions",
+    "TESTIMONIAL_4_TEXT": "We've been partnering with FAC for over 5 years. Their training programs have been instrumental in developing our leadership team. True HR experts!",
+    "TESTIMONIAL_4_NAME": "David Thompson",
+    "TESTIMONIAL_4_POSITION": "Managing Director, Healthcare Plus",
+    "TESTIMONIAL_5_TEXT": "FAC's expertise in compliance and policy gave us peace of mind. They ensured we met all regulatory requirements while maintaining a positive work environment.",
+    "TESTIMONIAL_5_NAME": "Lisa Anderson",
+    "TESTIMONIAL_5_POSITION": "COO, Manufacturing Dynamics",
+    "TESTIMONIAL_6_TEXT": "A truly professional team that delivers results. Their compensation strategy helped us attract top talent while staying within budget. Outstanding work!",
+    "TESTIMONIAL_6_NAME": "Robert Martinez",
+    "TESTIMONIAL_6_POSITION": "Founder, Startup Ventures",
+    "LOGOS_TITLE": "Proud to Serve Industry Leaders"
   },
   "CONTACT": {
     "TITLE": "Contact Us",

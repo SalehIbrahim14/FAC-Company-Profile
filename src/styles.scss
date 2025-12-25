@@ -31,7 +31,7 @@ html {
 /* Accessibility improvements */
 a:focus,
 button:focus {
-  outline: 2px solid #0d6efd;
+  outline: 2px solid #08AE2C;
   outline-offset: 2px;
 }
 
@@ -56,47 +56,47 @@ button:focus {
 }
 
 .bg-primary {
-  background-color: #08af2c !important;
+  background-color: #08AE2C !important;
 }
 
 .text-primary {
-  color: #08af2c !important;
+  color: #08AE2C !important;
 }
 
 .btn-primary {
-  background-color: #08af2c;
-  border-color: #08af2c;
+  background-color: #08AE2C;
+  border-color: #08AE2C;
 }
 
 .btn-outline-primary {
-  color: #08af2c;
-  border-color: #08af2c;
+  color: #08AE2C;
+  border-color: #08AE2C;
 
   :hover {
-    background-color: #08af2c;
+    background-color: #08AE2C;
     color: white;
   }
 }
 
 .bg-secondary {
-  background-color: #021f2e !important;
+  background-color: #15455A !important;
 }
 
 .text-secondary {
-  color: #021f2e !important;
+  color: #15455A !important;
 }
 
 .btn-secondary {
-  background-color: #021f2e;
-  border-color: #021f2e;
+  background-color: #15455A;
+  border-color: #15455A;
 }
 
 .btn-outline-secondary {
-  color: #021f2e;
-  border-color: #021f2e;
+  color: #15455A;
+  border-color: #15455A;
 
   :hover {
-    background-color: #021f2e;
+    background-color: #15455A;
     color: white;
   }
 }
@@ -107,8 +107,8 @@ button:focus {
 
 /* Global Styles */
 :root {
-    --primary-color: #0d6efd;
-    --secondary-color: #6c757d;
+    --primary-color: #08AE2C;
+    --secondary-color: #15455A;
     --success-color: #198754;
     --info-color: #0dcaf0;
     --warning-color: #ffc107;
@@ -176,7 +176,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    background: linear-gradient(135deg, #15455A 0%, #0d3545 100%);
     color: white;
     padding: 80px 0 0;
     position: relative;
@@ -265,7 +265,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(13, 110, 253, 0.1);
+    background: rgba(8, 174, 44, 0.1);
     border-radius: 15px;
     transition: all var(--transition-speed) ease;
 }
@@ -281,7 +281,7 @@ body {
 
 /* Company Info Styles */
 .company-image-placeholder {
-    background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(10, 88, 202, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(21, 69, 90, 0.1) 0%, rgba(13, 53, 69, 0.1) 100%);
     border-radius: 20px;
     padding: 80px;
     display: flex;
@@ -291,7 +291,7 @@ body {
 }
 
 .company-image-placeholder:hover {
-    background: linear-gradient(135deg, rgba(13, 110, 253, 0.2) 0%, rgba(10, 88, 202, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(21, 69, 90, 0.2) 0%, rgba(13, 53, 69, 0.2) 100%);
 }
 
 /* Testimonial Styles */
@@ -318,7 +318,7 @@ body {
 .form-control:focus,
 .form-select:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+    box-shadow: 0 0 0 0.25rem rgba(8, 174, 44, 0.1);
 }
 
 /* Button Styles */
@@ -344,7 +344,7 @@ body {
 
 /* CTA Box */
 .cta-box {
-    background: linear-gradient(135deg, #021f2e 0%, #021f2e 100%);
+    background: linear-gradient(135deg, #15455A 0%, #0d3545 100%);
     color: white;
 }
 
