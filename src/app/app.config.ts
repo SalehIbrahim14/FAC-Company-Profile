@@ -4,6 +4,7 @@ import { provideHttpClient, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { importProvidersFrom } from '@angular/core';
 import { Observable } from 'rxjs';
+// import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { routes } from './app.routes';
 
@@ -26,9 +27,10 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideHttpClient(),
+    // provideAnimations(),
     importProvidersFrom(
       TranslateModule.forRoot({
-        defaultLanguage: 'en',
+        defaultLanguage: 'ar',
         loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,
@@ -38,3 +40,4 @@ export const appConfig: ApplicationConfig = {
     )
   ]
 };
+

@@ -23,37 +23,37 @@
 .service-card {
   height: 100%;
   transition: all 0.3s ease;
-  animation: fadeInUp 0.6s ease-out;
+  // animation: fadeInUp 0.6s ease-out;
 
-  &.animate-delay-1 {
-    animation-delay: 0.2s;
-    animation-fill-mode: both;
-  }
+  // &.animate-delay-1 {
+  //   animation-delay: 0.2s;
+  //   animation-fill-mode: both;
+  // }
 
-  &.animate-delay-2 {
-    animation-delay: 0.4s;
-    animation-fill-mode: both;
-  }
+  // &.animate-delay-2 {
+  //   animation-delay: 0.4s;
+  //   animation-fill-mode: both;
+  // }
 
-  &.animate-delay-3 {
-    animation-delay: 0.6s;
-    animation-fill-mode: both;
-  }
+  // &.animate-delay-3 {
+  //   animation-delay: 0.6s;
+  //   animation-fill-mode: both;
+  // }
 
-  &.animate-delay-4 {
-    animation-delay: 0.8s;
-    animation-fill-mode: both;
-  }
+  // &.animate-delay-4 {
+  //   animation-delay: 0.8s;
+  //   animation-fill-mode: both;
+  // }
 
-  &.animate-delay-5 {
-    animation-delay: 1s;
-    animation-fill-mode: both;
-  }
+  // &.animate-delay-5 {
+  //   animation-delay: 1s;
+  //   animation-fill-mode: both;
+  // }
 
-  &.animate-delay-6 {
-    animation-delay: 1.2s;
-    animation-fill-mode: both;
-  }
+  // &.animate-delay-6 {
+  //   animation-delay: 1.2s;
+  //   animation-fill-mode: both;
+  // }
 
   &:hover {
     transform: translateY(-10px);
@@ -99,3 +99,204 @@
     transform: translateY(0);
   }
 }
+
+// Pagination styles
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 500px;
+}
+
+.arrow-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  flex-shrink: 0;
+
+  &:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+  }
+
+  i {
+    line-height: 1;
+  }
+}
+
+.service-card-wrapper {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card {
+  width: 100%;
+  min-height: 400px;
+}
+
+// Pagination dots
+.pagination-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #999;
+    transform: scale(1.2);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 30px;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagination-container {
+    gap: 10px;
+    min-height: 450px;
+  }
+
+  .arrow-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .service-card {
+    min-height: 350px;
+  }
+
+  .service-card-wrapper {
+    max-width: 100%;
+  }
+}
+/* ENTER when moving FORWARD (like :increment) */
+.slide-enter-forward {
+  animation: slide-enter-forward 300ms ease-out;
+}
+
+@keyframes slide-enter-forward {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* LEAVE when moving FORWARD (card exits to the right) */
+.slide-leave-forward {
+  animation: slide-leave-forward 300ms ease-out;
+}
+
+@keyframes slide-leave-forward {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* ENTER when moving BACKWARD (like :decrement) */
+.slide-enter-backward {
+  animation: slide-enter-backward 300ms ease-out;
+}
+
+@keyframes slide-enter-backward {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* LEAVE when moving BACKWARD (card exits to the left) */
+.slide-leave-backward {
+  animation: slide-leave-backward 300ms ease-out;
+}
+
+@keyframes slide-leave-backward {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* ENTER (slide-in) */
+// .slide-in {
+//   transform: translateX(0);
+//   opacity: 1;
+//   transition: transform 300ms ease, opacity 300ms ease;
+// }
+
+// @starting-style {
+//   .slide-in {
+//     transform: translateX(40px);
+//     /* start slightly to the right */
+//     opacity: 0;
+//   }
+// }
+
+// /* LEAVE (slide-out) */
+// .slide-out {
+//   transform: translateX(-40px);
+//   /* end slightly to the left */
+//   opacity: 0;
+//   transition: transform 300ms ease, opacity 300ms ease;
+// }
+
+// @starting-style {
+//   .slide-out {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }

@@ -19,8 +19,9 @@ export class HeaderComponent {
   rtlStylesheet: any;
 
 
-  constructor(private translate: TranslateService) {
-    const savedLang = localStorage.getItem("preferredLanguage") || this.DEFAULT_LANGUAGE;
+  constructor(private translate: TranslateService) {    
+    const browserLang = this.translate.getBrowserLang();
+    const savedLang = localStorage.getItem("preferredLanguage") || browserLang || this.DEFAULT_LANGUAGE;
     this.currentLang = savedLang;
     this.translate.use(this.currentLang);
     this.updateRtlStylesheet(this.currentLang);

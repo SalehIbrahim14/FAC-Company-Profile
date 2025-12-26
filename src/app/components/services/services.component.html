@@ -7,23 +7,69 @@
     <div class="col-lg-6 col-sm-12">
       <section class="services-list py-2">
         <div class="container">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4 col-sm-12" *ngFor="let service of services; let i = index">
-              <div class="service-card h-100 p-4 rounded shadow-sm hover-lift card" [class.animate-delay-1]="i === 1"
-                [class.animate-delay-2]="i === 2" [class.animate-delay-3]="i === 3" [class.animate-delay-4]="i === 4"
-                [class.animate-delay-5]="i === 5" [class.animate-delay-6]="i === 6">
+          <div class="pagination-container">
+            <!-- Previous Arrow -->
+            <button class="arrow-btn prev-btn" (click)="previousService()" [disabled]="currentServiceIndex === 0">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <!-- Service Card -->
+            <div class="service-card-wrapper">
+
+              <!-- <div 
+              class="service-card p-4 rounded shadow-sm hover-lift card" animate.enter="slide-in"
+                animate.leave="slide-out">
                 <div class="service-icon mb-3">
-                  <!-- <i class="bi bi-graph-up-arrow text-primary fs-1"></i> -->
-                  <i class="bi" [ngClass]="service.icon"></i>
+                  <i class="bi" [ngClass]="currentService.icon"></i>
                 </div>
-                <h4 class="fw-bold mb-3">{{ 'SERVICES.' + service.key + '.TITLE' | translate }}</h4>
-                <p class="text-muted mb-3">{{ 'SERVICES.' + service.key + '.DESCRIPTION' | translate }}</p>
-                <ul class="list-unstyled" *ngFor="let benefit of service.benefits; let i = index">
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i><span>{{ 'SERVICES.' + service.key +
-                      '.BENEFITS.' + benefit | translate }}</span></li>
+                <h4 class="fw-bold mb-3">{{ 'SERVICES.' + currentService.key + '.TITLE' | translate }}</h4>
+                <p class="text-muted mb-3">{{ 'SERVICES.' + currentService.key + '.DESCRIPTION' | translate }}</p>
+                <ul class="list-unstyled">
+                  <li *ngFor="let benefit of currentService.benefits">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span>{{ 'SERVICES.' + currentService.key + '.BENEFITS.' + benefit | translate }}</span>
+                  </li>
                 </ul>
+              </div> -->
+              <ng-container *ngFor="let service of services; let i = index">
+                <div *ngIf="i === currentServiceIndex" class="service-card p-4 rounded shadow-sm hover-lift card"
+                  [animate.enter]="enterClass">
+
+                  <div class="service-icon mb-3">
+                    <i class="bi" [ngClass]="service.icon"></i>
+                  </div>
+
+                  <h4 class="fw-bold mb-3">
+                    {{ 'SERVICES.' + service.key + '.TITLE' | translate }}
+                  </h4>
+
+                  <p class="text-muted mb-3">
+                    {{ 'SERVICES.' + service.key + '.DESCRIPTION' | translate }}
+                  </p>
+
+                  <ul class="list-unstyled">
+                    <li *ngFor="let benefit of service.benefits">
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      <span>
+                        {{ 'SERVICES.' + service.key + '.BENEFITS.' + benefit | translate }}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </ng-container>
+              <!-- Pagination Dots -->
+              <div class="pagination-dots mt-3">
+                <span class="dot" *ngFor="let service of services; let i = index"
+                  [class.active]="i === currentServiceIndex" (click)="goToService(i)">
+                </span>
               </div>
             </div>
+
+            <!-- Next Arrow -->
+            <button class="arrow-btn next-btn" (click)="nextService()"
+              [disabled]="currentServiceIndex === services.length - 1">
+              <i class="bi bi-chevron-right"></i>
+            </button>
           </div>
         </div>
       </section>

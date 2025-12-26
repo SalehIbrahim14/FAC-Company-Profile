@@ -24,12 +24,10 @@ import { ContactComponent } from './components/contact/contact.component';
 })
 export class App implements OnInit {
   constructor(private translate: TranslateService) {
-    // Set default language
-    this.translate.setDefaultLang('en');
     
     // Try to use browser language, fallback to English
     const browserLang = this.translate.getBrowserLang();
-    const langToUse = browserLang?.match(/en|ar/) ? browserLang : 'en';
+    const langToUse = browserLang?.match(/en|ar/) ? browserLang : 'ar';
     this.translate.use(langToUse);
     
     // Set document direction based on language
