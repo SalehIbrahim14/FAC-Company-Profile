@@ -2,6 +2,7 @@
   "HEADER": {
     "HOME": "Home",
     "ABOUT": "About Us",
+    "WHO_WE_ARE": "Who We Are",
     "SERVICES": "Services",
     "CLIENTS": "Our Clients",
     "CONTACT": "Contact",
@@ -30,11 +31,7 @@
   },
   "ABOUT": {
     "TITLE": "About Us",
-    "DESCRIPTION": "FAC Company is a leading provider of professional services with years of experience in delivering excellence to our clients.",
-    "MISSION_TITLE": "Our Mission",
-    "MISSION_TEXT": "To deliver innovative solutions that exceed our clients' expectations and drive their success.",
-    "VISION_TITLE": "Our Vision",
-    "VISION_TEXT": "To be the most trusted and respected company in our industry, known for quality and reliability.",
+    "DESCRIPTION": "An experienced firm (over 15 years) aiming to provide the First, most Accurate, and Fastest Answer to clients, transforming challenges into confident growth and expansion.",
     "VALUES_TITLE": "Our Values",
     "VALUES": {
       "INTEGRITY": "Integrity",
@@ -42,6 +39,16 @@
       "INNOVATION": "Innovation",
       "CUSTOMER_FOCUS": "Customer Focus"
     }
+  },
+  "WHO_ARE_WE": {
+    "TITLE": "Who We Are",
+    "DESCRIPTION": "First Answer Consulting is a leading firm in administrative and economic consulting, with nearly 15 years of experience delivering impactful management solutions and exceptional value to clients locally and internationally.",
+    "TEAM_TITLE": "Our Team",
+    "TEAM_TEXT": "\"Implementation Partners: Passion for Results, Expertise in the Journey\" An alliance of experts to transform your challenges into real growth opportunities.",
+    "MISSION_TITLE": "Our Mission",
+    "MISSION_TEXT": "To deliver innovative solutions that exceed our clients' expectations and drive their success.",
+    "VISION_TITLE": "Our Vision",
+    "VISION_TEXT": "To be the most trusted and respected company in our industry, known for quality and reliability."
   },
   "SERVICES": {
     "TITLE": "Our Services",

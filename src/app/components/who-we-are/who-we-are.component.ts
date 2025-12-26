@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-who-we-are',
   standalone: true,
   imports: [CommonModule, TranslateModule],
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  templateUrl: './who-we-are.component.html',
+  styleUrls: ['./who-we-are.component.scss']
 })
-export class AboutComponent {
+export class WhoWeAreComponent {
   values = [
     { key: 'INTEGRITY', icon: 'bi-shield-check' },
     { key: 'EXCELLENCE', icon: 'bi-star' },

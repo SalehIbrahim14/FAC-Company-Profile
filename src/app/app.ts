@@ -3,7 +3,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
+import { WhoWeAreComponent } from './components/who-we-are/who-we-are.component';
 import { ServicesComponent } from './components/services/services.component';
 import { Clients } from './components/clients/clients.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -14,7 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent,
+    WhoWeAreComponent,
     ServicesComponent,
     Clients,
     ContactComponent, 
