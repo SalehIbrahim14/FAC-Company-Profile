@@ -12,7 +12,21 @@
     "TITLE": "Welcome to FAC Company",
     "SUBTITLE": "Your Trusted Partner in Excellence",
     "DESCRIPTION": "We provide innovative solutions and exceptional services to help your business grow and succeed in the digital age.",
-    "CTA_BUTTON": "Get Started"
+    "CTA_BUTTON": "Get Started",
+    "FEATURES": {
+      "QUALITY": {
+        "TITLE": "Quality Assurance",
+        "DESCRIPTION": "Delivering high-quality solutions that meet and exceed expectations."
+      },
+      "FAST_DELIVERY": {
+        "TITLE": "Fast Delivery",
+        "DESCRIPTION": "Quick turnaround times without compromising on quality."
+      },
+      "SUPPORT": {
+        "TITLE": "24/7 Support",
+        "DESCRIPTION": "Round-the-clock support to keep your business running smoothly."
+      }
+    }
   },
   "ABOUT": {
     "TITLE": "About Us",
@@ -91,7 +105,10 @@
         "B3": "Process Documentation",
         "B4": "Compliance Documentation"
       }
-    }
+    },
+    "CTA_TITLE": "Ready to Transform Your HR Strategy?",
+    "CTA_SUBTITLE": "Let's discuss how our services can help your organization succeed.",
+    "CTA_BUTTON": "Book a Consultation"
   },
   "CLIENTS": {
     "SECTION_TITLE": "Our Valued Clients",
@@ -175,5 +192,8 @@
     "REQUIRED": "This field is required",
     "EMAIL_INVALID": "Please enter a valid email address",
     "MIN_LENGTH": "Minimum length is {{value}} characters"
+  },
+  "FLOATING_BADGE": {
+    "TEXT": "Our Services 24 Hours"
   }
 }

@@ -15,22 +15,6 @@
 
             <!-- Service Card -->
             <div class="service-card-wrapper">
-
-              <!-- <div 
-              class="service-card p-4 rounded shadow-sm hover-lift card" animate.enter="slide-in"
-                animate.leave="slide-out">
-                <div class="service-icon mb-3">
-                  <i class="bi" [ngClass]="currentService.icon"></i>
-                </div>
-                <h4 class="fw-bold mb-3">{{ 'SERVICES.' + currentService.key + '.TITLE' | translate }}</h4>
-                <p class="text-muted mb-3">{{ 'SERVICES.' + currentService.key + '.DESCRIPTION' | translate }}</p>
-                <ul class="list-unstyled">
-                  <li *ngFor="let benefit of currentService.benefits">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>{{ 'SERVICES.' + currentService.key + '.BENEFITS.' + benefit | translate }}</span>
-                  </li>
-                </ul>
-              </div> -->
               <ng-container *ngFor="let service of services; let i = index">
                 <div *ngIf="i === currentServiceIndex" class="service-card p-4 rounded shadow-sm hover-lift card"
                   [animate.enter]="enterClass">
@@ -76,16 +60,12 @@
     </div>
   </div>
 
-
   <div class="row mt-5 bg-secondary">
     <div class="col-12 text-center">
       <div class="p-5 rounded shadow">
-        <h3 class="fw-bold mb-3" data-translate="services_cta_title">هل أنت مستعد لتحويل استراتيجية الموارد البشرية
-          الخاصة بك؟</h3>
-        <p class="lead mb-4" data-translate="services_cta_subtitle">دعنا نناقش كيف يمكن لخدماتنا أن تساعد مؤسستك على
-          النجاح.</p>
-        <a href="#contact" class="btn btn-primary btn-lg hover-lift">احجز
-          استشارة</a>
+        <h3 class="fw-bold mb-3">{{ 'SERVICES.CTA_TITLE' | translate }}</h3>
+        <p class="lead mb-4">{{ 'SERVICES.CTA_SUBTITLE' | translate }}</p>
+        <a href="#contact" class="btn btn-primary btn-lg hover-lift">{{ 'SERVICES.CTA_BUTTON' | translate }}</a>
       </div>
     </div>
   </div>

@@ -12,8 +12,8 @@ import { TranslateModule } from '@ngx-translate/core';
 export class AboutComponent {
   values = [
     { key: 'INTEGRITY', icon: 'bi-shield-check' },
-    { key: 'EXCELLENCE', icon: 'bi-star-fill' },
-    { key: 'INNOVATION', icon: 'bi-lightbulb-fill' },
-    { key: 'CUSTOMER_FOCUS', icon: 'bi-people-fill' }
+    { key: 'EXCELLENCE', icon: 'bi-star' },
+    { key: 'INNOVATION', icon: 'bi-lightbulb' },
+    { key: 'CUSTOMER_FOCUS', icon: 'bi-people' }
   ];
 }
