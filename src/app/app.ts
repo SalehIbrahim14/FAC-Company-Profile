@@ -5,7 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
-import { Clients } from './components/clients/clients';
+import { Clients } from './components/clients/clients.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 @Component({

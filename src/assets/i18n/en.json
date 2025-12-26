@@ -31,7 +31,7 @@
   },
   "SERVICES": {
     "TITLE": "Our Services",
-    "SUBTITLE": "We offer a comprehensive range of professional services",
+    "DESCRIPTION": "We offer a comprehensive range of professional services",
     "SERVICE_1": {
       "TITLE": "Consulting",
       "DESCRIPTION": "Expert consulting services to help your business make informed decisions and achieve strategic goals.",

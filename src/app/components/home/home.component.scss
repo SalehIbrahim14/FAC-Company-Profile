@@ -18,7 +18,14 @@
     animation: float 3s ease-in-out infinite;
   }
 }
-.bg-img-hero{
+
+@media screen {
+  .mobile-margin-top-100 {
+    margin-top: 100px;
+  }
+}
+
+.bg-img-hero {
   background-image: url('/assets/images/1.jpg');
   background-size: cover;
   background-position: center;
@@ -27,9 +34,12 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -60,6 +70,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -71,6 +82,7 @@
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);

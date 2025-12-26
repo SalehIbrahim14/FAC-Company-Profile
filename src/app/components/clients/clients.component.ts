@@ -5,8 +5,8 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-clients',
   imports: [CommonModule, TranslateModule],
-  templateUrl: './clients.html',
-  styleUrl: './clients.scss',
+  templateUrl: './clients.component.html',
+  styleUrl: './clients.component.scss',
 })
 export class Clients {
 
